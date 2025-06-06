@@ -14,3 +14,8 @@ RUN apt-get update && apt-get install -y gnupg2 curl && \
     sed -i -e "s/# $LANG.*/$LANG UTF-8/" /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=$LANG
+
+
+ENTRYPOINT ["kamailio"]
+
+CMD ["-ddDDeE"]
