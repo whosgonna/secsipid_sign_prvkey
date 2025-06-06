@@ -1,0 +1,10 @@
+services:
+  kamailio:
+    build:
+      context: .
+      no_cache: true
+    volumes:
+      - ./kamailio:/etc/kamailio
+    entrypoint: ["/usr/sbin/kamailio"]
+    command: ["-ddDDeE"]
+
